@@ -108,22 +108,21 @@
     <span>
                         &nbsp;: <abbr title="\mysqli">mysqli</abbr>|null    </span>
 </dt>
-<dd>Método para esblecer conexión con la base de datos.</dd>
+<dd>Método para establecer conexión con la base de datos.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/gestionLibros.html#method_consultarAutores">consultarAutores()</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
-<dd>Método para consultar los datos de un autor pasando su id como parametro.</dd>
+<dd>Método para consultar los datos de un autor pasando parte de su nombre como parametro.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/gestionLibros.html#method_consultarLibros">consultarLibros()</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
-<dd>Método para consultar todo los libros de un autor pasando su id como parametro
-Si no se pasa ningún parametro muestra todos los libros.</dd>
+<dd>Método para consultar todo los libros de un autor pasando su id como parametro</dd>
 
         </dl>
 
@@ -151,10 +150,10 @@ Si no se pasa ningún parametro muestra todos los libros.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="gestionLibros.php"><a href="files/gestionlibros.html"><abbr title="gestionLibros.php">gestionLibros.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">13</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Método para esblecer conexión con la base de datos.</p>
+        <p class="phpdocumentor-summary">Método para establecer conexión con la base de datos.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -240,17 +239,16 @@ Si no se pasa ningún parametro muestra todos los libros.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="gestionLibros.php"><a href="files/gestionlibros.html"><abbr title="gestionLibros.php">gestionLibros.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">47</span>
+    <span class="phpdocumentor-element-found-in__line">45</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Método para consultar los datos de un autor pasando su id como parametro.</p>
+        <p class="phpdocumentor-summary">Método para consultar los datos de un autor pasando parte de su nombre como parametro.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">consultarAutores</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\mysqli">mysqli</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$conn</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nombre</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+                <span class="phpdocumentor-signature__name">consultarAutores</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\mysqli">mysqli</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$conn</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nombre</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
-        <section class="phpdocumentor-description"><p>Si no se pasa ningún parametro muestra todos los autores.</p>
-</section>
+        <section class="phpdocumentor-description"></section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -265,10 +263,12 @@ Si no se pasa ningún parametro muestra todos los libros.</dd>
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$nombre</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Nombre del autor a consultar.</p>
+</section>
+
             </dd>
             </dl>
 
@@ -310,11 +310,10 @@ Si no se pasa ningún parametro muestra todos los libros.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="gestionLibros.php"><a href="files/gestionlibros.html"><abbr title="gestionLibros.php">gestionLibros.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">84</span>
+    <span class="phpdocumentor-element-found-in__line">81</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Método para consultar todo los libros de un autor pasando su id como parametro
-Si no se pasa ningún parametro muestra todos los libros.</p>
+        <p class="phpdocumentor-summary">Método para consultar todo los libros de un autor pasando su id como parametro</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

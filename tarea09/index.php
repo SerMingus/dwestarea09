@@ -15,13 +15,13 @@
 		<script>
 			$(document).ready(function(){
 				
-				//Intercambia los resultados visibles.
+				//Intercambia los resultados visibles al hacer click en el cuadro de texto del buscador PHP.
 				$("#nombrePHP").click(function(){
 					$("#resultAJAX").hide();
 					$("#resultPHP").show();
 				});
 				
-				//Intercambia los resultados visibles.
+				//Intercambia los resultados visibles al hacer click en el cuadro de texto del buscador Ajax con jQuery.
 				$("#nombreAJAX").click(function(){
 					$("#resultAJAX").show();
 					$("#resultPHP").hide();
@@ -44,7 +44,7 @@
 					<!-- Titulo de los resultados de Ajax -->
 								
 					h2 = document.createElement("h2");
-					h2.textContent = "Resultado buscador Ajax:";
+					h2.textContent = "Resultado buscador Ajax con jQuery:";
 					resultAJAX.appendChild(h2);
 					
 					<!-- Raya horizontal -->

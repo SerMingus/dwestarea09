@@ -2,9 +2,8 @@
 class gestionLibros
 {
 	/**
-	 * Método para esblecer conexión con la base de datos.
+	 * Método para establecer conexión con la base de datos.
 	 * @author Sergio Mingorance Martín.
-	 * @param int $id
 	 * @param string $servername URL del servidor.
 	 * @param string $database Nombre de la base de datos.
 	 * @param string $username Nombre de usuario para acceder a la base de datos.
@@ -14,7 +13,7 @@ class gestionLibros
 	public function conexion($servername,$username,$password,$database){
 		
 		// Establece conexión con la base de datos omitiendo errores por pantalla.
-		@$conn = new mysqli($servername,$username,$password,$database);
+		$conn = new mysqli($servername,$username,$password,$database);
 		
 		// Si hay algún problema con la conexión lo muestra por pantalla.
 		if($conn->connect_error){
@@ -37,10 +36,9 @@ class gestionLibros
 	}
 
 	/**
-	 * Método para consultar los datos de un autor pasando su id como parametro.
-	 * Si no se pasa ningún parametro muestra todos los autores.
+	 * Método para consultar los datos de un autor pasando parte de su nombre como parametro.
 	 * @author Sergio Mingorance Martín.
-	 * @param int $autor Nombre del autor a consultar.
+	 * @param string $nombre Nombre del autor a consultar.
 	 * @param mysqli $conn Objeto mysqli con la conexión a la base de datos.
 	 * @return array Retorna array con el resultado de la consulta.
  	 */
@@ -58,9 +56,9 @@ class gestionLibros
 			// Guarda el resultado de la consulta en un array asociativo.
 			while ($fila = $resultado->fetch_assoc()){
 				$final[] = ["id"=>$fila["id"],
-						  "nombre"=>$fila["nombre"],
-						  "apellidos"=>$fila["apellidos"],
-						  "nacionalidad"=>$fila["nacionalidad"]];
+						    "nombre"=>$fila["nombre"],
+						    "apellidos"=>$fila["apellidos"],
+						    "nacionalidad"=>$fila["nacionalidad"]];
 			}
 				
 		// Si hay algún problema con la consulta se muestra por pantalla.
@@ -75,7 +73,6 @@ class gestionLibros
 	
 	/**
 	 * Método para consultar todo los libros de un autor pasando su id como parametro
-	 * Si no se pasa ningún parametro muestra todos los libros.
 	 * @author Sergio Mingorance Martín.
 	 * @param int $autor Número id del autor a consultar.
 	 * @param mysqli $conn Objeto mysqli con la conexión a la base de datos.
